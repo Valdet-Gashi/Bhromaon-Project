@@ -465,3 +465,36 @@ body {
   .pic-2 img {
     width: 100%;
   }
+  .how-it-works {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 15px;
+    background-color: #333333;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+  
+  .how-it-works__container {
+    max-width: 1173px;
+    width: 100%;
+    min-height: 340px;
+  }
+  
+  .how-it-works__top {
+    min-height: 340px;
+    box-sizing: border-box;
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  
+    img {
+      width: 100%;
+    }
+  }
