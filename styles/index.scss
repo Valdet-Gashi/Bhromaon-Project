@@ -1,0 +1,336 @@
+$btnBg1:#182b3a;
+$btnBg2:linear-gradient(315deg, #182b3a 0%, #20a4f3 74%);
+$bodyBg:#ffffff;
+$bluecol:#5474fd;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: $bodyBg;
+    overflow-x: hidden;
+  }
+
+//   Header section
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .header__section {
+    width: 100%;
+    box-sizing: border-box;
+    margin:15px 15px 0 15px;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+  .header__container {
+    max-width: 1173px;
+    width: 100%;
+    min-height: 826px;
+  }
+  .header__top {
+    min-height: 700px;
+    box-sizing: border-box;
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $bodyBg;
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 180px;
+  }
+    // Stilizimi i BHROMAON
+  .waviy {
+      position: relative;
+      -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+      font-size: 60px;
+    }
+    .waviy span {
+      position: relative;
+      display: inline-block;
+      color: $bodyBg;
+      font-weight: bold;
+      font-size: 48px;
+      text-transform: uppercase;
+      animation: waviy 1s infinite;
+      animation-delay: calc(.1s * var(--i)); 
+    }
+    @keyframes waviy {
+      0%,40%,100% {
+        transform: translateY(0)
+      }
+      20% {
+        transform: translateY(-20px)
+      }
+    }
+  
+  .header__logo > h2 {
+    font-size: 22px;
+    line-height: 1.1;
+    letter-spacing: 6.82px;
+  }
+
+  @media screen and (max-width: 497px) {
+    .waviy span {
+      font-size: 30px;
+    }
+    .header__logo h2 {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 383px) {
+      .waviy span {
+        font-size: 18px;
+      }
+      .header__logo h2 {
+        font-size: 11px;
+      }
+    }
+      
+    // Stilizimi i Search Bar
+  .searchbar {
+    position: relative;
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -80px;
+  }
+
+  @media screen and (max-width: 690px) {
+    .searchbar {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .searchbar {
+      flex-direction: column;
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 460px) {
+    .searchbar {
+      flex-direction: column;
+      width: 300px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .searchbar {
+      flex-direction: column;
+      width: 250px;
+    }
+  }
+
+    // Stilizimi i inputit te search bar
+  .searchbar__text {
+    max-width: 503px;
+    width: 100%;
+    height: 61px;
+    border: none;
+    font-size: 14px;
+    font-family: "Josefin Sans", sans-serif;
+    color: black;
+    text-align: center;
+  }
+  .searchbar__text  {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  // Input-search bar -responsive
+  @media screen and (max-width: 690px) {
+    .searchbar__text {
+      box-sizing: border-box;
+      margin: 0 15px 15px 15px;
+    }
+  }
+
+  // Stilizimi i butonit Search
+  .searchbar__button {
+    max-width: 153px;
+    width: 100%;
+    height: 63px;
+    background-color:$bluecol;
+    color: $bodyBg;
+    font-family: "Aleo", serif;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 1.4px;
+    border: 2px solid $bodyBg;
+    margin-right: 5px;
+  }
+  .searchbar__button:hover {
+      background-color: $btnBg1;
+      background-image: $btnBg2;
+        text-decoration: underline;
+  }
+  .searchbar__button:focus {
+    background-color: #999999;
+    text-decoration: underline;
+  }
+
+    //Stilizimi i scroll-it
+  .header__scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .header__scroll > a {
+    text-decoration: none;
+    color: $bodyBg;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 2.8px;
+  }
+  .header__scroll >a:hover {
+      color: #1fd1f9;
+    transform: scale(1.3);
+  }
+  
+//Stilimi i navigation bar
+  .nav {
+    width: 100%;
+    box-sizing: border-box;
+    background-color:$bluecol;
+    margin: 0 15px;
+  }
+  .nav__container {
+    max-width: 1173px;
+    width: 100%;
+    min-height: 83px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .nav__top {
+    width: 100%;
+    min-height: 83px;
+    box-sizing: border-box;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+// Nav-responsive
+  @media screen and (max-width: 690px) {
+    .nav__top {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .nav__top {
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 310px;
+      width: 100%;
+    }
+  }
+
+ // Stilizimi i llogos se nav-it
+  .nav__logo {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2.4px;
+    color: $bodyBg;
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: 690px) {
+    .nav__logo {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .nav__logo {
+      font-size: 18px;
+    }
+  }
+  .nav__list > ul {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__list > ul > li {
+    margin: 0 10px;
+  }
+
+  @media screen and (max-width: 360px) {
+    .nav__list > ul {
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .nav__link {
+    font-family: "Aleo", serif;
+    color: $bodyBg;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  
+  .nav__link {
+      display: inline-block;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      color:white;
+       text-decoration: none;
+    }
+  
+  .nav__link:before{
+      content: '';
+      background-color: #1fd1f9;
+      background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .nav__list a:hover{
+        color:#1fd1f9;
+        font-weight: bold;
+    }
+    .nav__link:hover::before{
+      width: 100%;
+    }
+  
+  @media screen and (max-width: 360px) {
+    .nav__link {
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+  }
